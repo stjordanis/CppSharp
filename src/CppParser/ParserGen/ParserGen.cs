@@ -83,7 +83,7 @@ namespace CppSharp
 
             if (Kind == GeneratorKind.CSharp)
                 options.OutputDir = Path.Combine(options.OutputDir, parserOptions.TargetTriple + extraTriple);
-
+            // TODO: ignore the building of symbols by handing the event for compilation; it can't work for now because we generate for all platforms and at the same time we cannot cross-link yet
             options.CheckSymbols = false;
             //options.Verbose = true;
             parserOptions.UnityBuild = true;
